@@ -238,9 +238,12 @@ applicable for every device */
 
 	a.tags {
 		line-height: 1.8em;
-		padding: 0.3em;
-		background-color: #233542;
-		border-radius: 0.2em;
+		padding: 0.3em 0.4em;
+		/*background-color: #233542;*/
+		border-radius: 0.4em;
+		border: 1px solid #233542;
+		margin: 0 0.5em 0 0;
+		/*border-color: ;*/
 	}
 
 	a.tags:hover {
