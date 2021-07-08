@@ -42,20 +42,14 @@
 	<link rel="stylesheet" href="https://www.velovivre.de/theme/css/tipuesearch.css"/> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js" integrity="sha512-JxJpoAvmomz0MbIgw9mx+zZJLEvC6hIgQ6NcpFhVmbK1Uh5WynnRTTSGv3BTZMNBpPbocmdSJfldgV5lVnPtIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
 	function openNav() {
-  	// document.getElementById("navbar").style.width = "360px";
   	document.getElementById("navbar").style.display = "block";
-		// document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.8)";
-		// document.getElementById("main").style.zIndex = "4";
   	document.getElementById("menutoggle").style.display = "none";	
   }
 
 	function closeNav() {
-  	// document.getElementById("navbar").style.width = "0";
-		// document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0)";
-		// document.getElementById("main").style.zIndex = "-1";
   	document.getElementById("navbar").style.display = "none";
   	document.getElementById("menutoggle").style.display = "block";
 	}
@@ -181,10 +175,10 @@ Für Trainer und Sportler bleibt festzuhalten, dass keine der genannten Regenrat
 <!-- Menu w/ Links, Categories & Blogroll -->
 	<div id="navbar">
 		<div class="menubox">
-			<a class="closenav" onclick="closeNav()"><i class="fas fa-times fa-lg"></i></a>
-				<p><a href="https://www.velovivre.de/ueber">Über</a></p>
-				<p><a href="https://www.velovivre.de/datenschutzerklarung">Datenschutzerklärung</a></p>
-				<p><a href="https://www.velovivre.de/impressum">Impressum</a></p>
+			<a class="closenav" onclick="closeNav()"><i class="fas fa-times fa-lg" style="margin-bottom: 1.5em"></i></a>
+				<p><a class="navlink" href="https://www.velovivre.de/ueber">Über</a></p>
+				<p><a class="navlink" href="https://www.velovivre.de/datenschutzerklarung">Datenschutzerklärung</a></p>
+				<p><a class="navlink" href="https://www.velovivre.de/impressum">Impressum</a></p>
 		</div>
 
 		<br>
