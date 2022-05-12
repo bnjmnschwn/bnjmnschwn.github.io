@@ -1,0 +1,503 @@
+ /*VELOVIVRE (le-cygne Pelican Theme) STYLEHSHEET
+
+COLORS
+
+Background: 		#FFFFFF
+Überschriften: 	#233542
+Hover:					#ffcfd7
+Contrast: 		#608894 
+Navigation:		#9CA695
+*/
+
+
+/* GENERAL STYLES 
+applicable for every device */
+
+	* {
+		box-sizing: border-box;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	body, html {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		background-color: #ffffff; /*#fbf9fb;*/
+		scroll-behavior: smooth;
+		color: #233542;
+	}
+
+
+/* PAGE ELEMENTS, BOXES, etc. */
+	#main {
+		background-color: rgba(0,0,0,0);
+		height: 100%;
+		top: 0;
+		position: fixed;
+		width: 100%;
+	}
+
+	#menutoggle {
+		z-index: 2;
+		position: absolute;
+		top: 48px;
+		left: 48px;
+		display: inline-block;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #233542;
+		padding-bottom: 1em;
+	}
+
+	#menutoggle:hover {
+		color: #ffcfd7;
+		transition: 0.3s ease-in;
+	}
+
+	.content {
+		margin: 0 auto;
+		width: 70%;
+		max-width: 1000px; 
+		padding: 6em 8em 3em 8em;
+		font-size: 1em;
+		line-height: 1.6;
+		background-color: #FFF;
+		z-index: 1;
+		color: #737373;
+		text-align: justify;
+	}
+
+	#navbar {
+		/*width: 400px;*/
+		width:  100%;
+		height: 100%;
+		/*background-color: rgba(156,166,149,0.95);*/
+		background-color: rgba(35,53,66,0.85);
+		font-size: 1em;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		overflow-y: scroll;
+		transition: 0.3s;
+		display: none;
+	}
+
+	#navbar::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	#navbar .menubox {
+		width: 100%; 
+		float: left; 
+		display: block;
+		padding: 48px 1.5em 0 48px;
+	}
+
+	#navbar .menubox a.navlink {
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+
+	#navbar .box {
+		width: 33%; 
+		float: left; 
+		display: block;
+		padding: 2em 1.5em 0 48px;
+	}
+
+	#navbar .menutitle {
+		font-weight: bold;
+		margin: 1vw 0vw; 
+		color: #fbf9fb;
+	}
+
+	.social {
+		position: fixed;
+		bottom: 8px;
+		left: 48px;
+		width: 100%;
+		z-index: 5;
+	}
+
+
+/* FONTS, HEADLINES etc. */
+
+	blockquote {
+		font-size: 1.2em;
+		font-style: italic;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #233542;
+		font-weight: 300;
+		margin: 2em 0 0em 0;
+		font-size: 1.4em;
+	}	
+
+/*	h3 {
+		font-size: 1.4em;
+	}*/
+
+	h1.sitetitle {
+		/*margin: 48px 0;*/
+		text-align: center;
+		padding: 0;
+		margin: 48px auto 0;
+		display: block;
+		font-size: 1em;
+	}
+
+	h1.sitetitle a {
+		font-size: 1.2em;
+		/*font-family: "Josefin Sans", sans-serif;*/
+		color: #233542;
+		font-weight: 300;
+		/*text-transform: uppercase;*/
+		letter-spacing: -0.025em;
+	}
+
+	h1.sitetitle a:hover {
+		/*transition: 0.3s;*/
+		color: #ffcfd7;
+	}		
+
+	h2.headline, h2.headline a {
+		color: #233542;
+		text-transform: uppercase;
+		margin: 2em 0;
+		font-weight: 550;
+		font-size: 1.3em;
+	}
+
+	h2.headline a:hover {
+		color: #608894;
+		/*transform: 0.3s;*/
+	}
+
+	hr {
+		width: 100%;
+		height: 1px;
+		border: 1px solid #F0F0F0;
+		margin: 5em 0em;
+	}
+
+	a {
+		text-decoration: none;
+		color: #608894;
+	}
+
+	a:hover {
+		color: #233542;
+		transition: 0.3s ease-in;
+	}
+
+	a.social-icons {
+		text-decoration: none;
+		color: #233542;
+		padding: 1em 0.33em;
+		display: inline-block;
+	}
+
+	a.closenav {
+	  cursor: pointer;
+	}
+
+	a.search {
+		text-decoration: none;
+		color: #233542;
+		position: absolute;
+		top: 48px;
+		right: 48px;
+	  cursor: pointer;
+	}
+
+	a.social-icons:hover, a.search:hover {
+		color: #ffcfd7;
+		transition: 0.3s ease-in;
+	}
+
+	#navbar a {
+		color: #fbf9fb;
+	}
+
+	#navbar a:hover {
+		color: #ffcfd7;
+		transition: 0.3s ease-in;
+	}
+
+	.details a:hover {
+		color: #233542;
+		transition: 0.3s ease-in;
+	}
+
+	a.tags {
+		line-height: 1.8em;
+		padding: 0.3em 0.4em;
+		/*background-color: #233542;*/
+		border-radius: 0.4em;
+		border: 1px solid #233542;
+		margin: 0 0.5em 0 0;
+		/*border-color: ;*/
+	}
+
+	a.tags:hover {
+		color: #ffcfd7;
+	}	
+
+	.blogroll {
+		line-height: 1.8em;
+		padding: 0.2em;
+		background-color: black;
+		opacity: 0.7;
+		border-radius: 0.2em;
+	}
+
+	.details {
+		font-size: 0.9em; 
+		color: #737373; 
+		display: inline;
+	}
+
+	.pagination {
+		width: 100%; 
+		margin: 3em auto; 
+		text-align: center;
+	}
+
+	.pagebutton {
+		line-height: 1.8em;
+		padding: 0.5em;
+		margin: 1em;
+		background-color: #233542;
+		border-radius: 0.2em;
+	}
+
+	.pagebutton:hover {
+		color: #ffcfd7;
+	}
+
+
+/* SEARCH FIELD */
+
+	.overlay input[type=text] {
+		padding: 0.5em;
+		font-size: 1.25vw;
+		border: none;
+		width: 100%;
+		background-color: #E1E8ED;
+		color: #66757F;
+		transition: background-color 0.3s;
+		border-radius: 2px;
+	}
+
+	.overlay {
+		height: 100%;
+		width: 100%;
+		display: none;
+		position: fixed;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		background-color: rgb(0,0,0);
+		/*background-color: rgba(0,0,0, 0.9);*/
+		background-color: rgba(35,53,66,0.85);
+	}
+
+	.overlay-content {
+		position: relative;
+		top: 50%;
+		text-align: center;
+		margin: auto;
+	}
+
+	.overlay .closebtn {
+	  position: absolute;
+	  top: 48px;
+	  right: 48px;
+	  font-weight: bold;
+	  cursor: pointer;
+	  color: #fbf9fb;
+	  transition: color 0.3s;
+	}
+
+	.overlay .closebtn:hover {
+	  color: #ffcfd7;
+	}		
+
+	.overlay input[type=text]:hover {
+		 background-color: #ffffff;
+	}
+
+
+/* TABLE STYLES */
+
+	table, th, tr, td {
+		text-align: left;
+		height: 2em;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	th, td {
+		padding: 0.5em;
+	}
+
+	thead th {
+		background-color: #9CA695;
+		color: #233542;
+	}
+
+	tbody th, td {
+		border-bottom: 1px solid #9CA695;
+	}
+
+	tr:hover {
+		background-color: #e5e7e3;
+	}
+
+/* Extra small devices (phones, 0 - 699px width) */
+@media screen and (max-width: 600px) {
+
+	h1.sitetitle {
+		text-align: center;
+		padding: 0;
+		margin: 36px auto;
+		display: block;
+
+	}
+
+	h1.sitetitle a {
+		font-size: 1em;
+		/*font-family: "Josefin Sans";*/
+		color: #233542;
+		font-weight: 300;
+		/*text-transform: uppercase;*/
+		letter-spacing: -0.025em;
+	}
+
+	h1.sitetitle a:hover {
+		transition: 0.3s ease-in;
+		color: #ffcfd7;
+	}	
+
+	h2.headline, h3 {
+		text-align: left;
+	}	
+
+	.social {
+		text-align: center;
+		padding: 0;
+		margin: 12px auto;
+		display: block;
+		position: relative;
+		left: 0;
+		z-index: 0;
+	}
+
+	a.search {
+		text-decoration: none;
+		color: #233542;
+		position: absolute;
+		top: 24px;
+		right: 24px;
+	}
+
+	#menutoggle {
+		z-index: 2;
+		position: absolute;
+		top: 24px;
+		left: 24px;
+		display: inline-block;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #233542;
+		padding-bottom: 1em;
+	}
+
+	#menutoggle:hover {
+		color: #ffcfd7;
+		transition: 0.3s ease-in;
+	}
+
+	.content {
+			width: 100%;
+			padding: 2em 2em 2em 2em;
+	}
+
+	#navbar {
+		width: 100%;
+		height: 100%;
+		/*background-color: rgba(156,166,149,0.95);*/
+		background-color: rgba(35,53,66,0.85);
+		font-size: 1em;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		overflow-y: scroll;
+		transition: 0.3s;
+		display: none;
+	}
+
+	#navbar::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	#navbar .menubox {
+		width: 100%; 
+		float: left; 
+		display: block;
+		padding: 24px 1.5em 0 24px;
+	}
+
+	#navbar .box {
+		width: 100%; 
+		float: left; 
+		display: block;
+		padding: 1em 1.5em 0 24px;
+	}
+
+	#menutoggle, .search {
+		margin:  12px 0;
+	}
+
+	#navbar .menutitle {
+		font-weight: bold;
+		margin: 1vw 0vw; 
+		color: #fbf9fb;
+	}
+
+	#navbar .menubox a.navlink {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	.overlay .closebtn {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		font-weight: bold;
+		cursor: pointer;
+		color: #fbf9fb;
+		transition: color 0.3s;
+	}
+
+}
+	 /*Medium devices (landscape tablets, 700px and up) 
+	/*@media screen and (min-width: 700px) {
+
+	/* Large devices (laptops/desktops, 992px and up) */
+	/*@media screen and (min-width: 990px) {
+
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	/*@media only screen and (min-width: 1200px) {...}*/
+	/*@media screen and (min-width: 1450px) {

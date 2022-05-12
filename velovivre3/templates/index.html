@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+
+
+{% block content %}
+
+{% for article in articles_page.object_list %}
+<h2 class="headline"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+<p class="details">{{ article.date|strftime('%d %b %Y') }} | {% for cat in article.categories %}<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
+
+<p>{{ article.content }}</p>
+<p class="details">{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}" class="tags">#{{ tag }}</a>{{ ' ' if not loop.last }}{% endfor %}</p>
+{% if not loop.last %}
+<hr>
+{% endif %}
+
+{% else %}
+<p>No Blogposts yet!</p>
+
+{% endfor %}
+
+{% if DEFAULT_PAGINATION %}
+<div class="pagination">
+{% if dates_next_page %}
+  <a class="pagebutton" href="{{ SITEURL }}/{{ articles_next_page.url }}">
+    <i class="fa fa-angle-left"></i> ältere Beiträge</a>
+{% endif %}
+{% if dates_previous_page %}
+  <a class="pagebutton" href="{{ SITEURL }}/{{ articles_previous_page.url }}">neuere Beiträge <i class="fa fa-angle-right"></i></a>
+{% endif %}
+</div>
+{% endif %}
+
+{% endblock %}

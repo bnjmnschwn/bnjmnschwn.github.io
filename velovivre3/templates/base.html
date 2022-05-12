@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171441624-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-171441624-1');
+	</script>
+
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Properities -->
+    <title>{% block title %}{{ SITENAME }}{% endblock %} - ein Blog über alles mit Radsport</title>
+	<meta name="generator" content="Pelican" />
+    <meta property="og:site_name" content="{{ SITENAME}}" />
+    <meta property="og:locale" content="{{ DEFAULT_LANG }}" />
+    {% block meta_tags %}
+    <meta name="description" content="{{ DESCRIPTION }}">
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:url" content="{{ SITEURL }}"/>
+    <meta property="og:description" content=" {{ DESCRIPTION }}" />
+    <meta property="og:type" content="website" />
+    {% endblock meta_tags %}
+    <meta name="twitter:card" content="summary_large_image">
+    {% if TWITTER_USERNAME %}
+    <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
+    {% endif %}
+    {% block twitter_card %}
+    <meta name="twitter:title" content="{{ SITENAME }}">
+    <meta name="twitter:description" content="{{ DESCRIPTION }}">
+    {% endblock %}
+	{% block head %}
+
+	{% block extra_head %}{% endblock extra_head %}
+	{% endblock head %}
+	<script src="https://kit.fontawesome.com/c556b1bf0b.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Josefin%20Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/youtube.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ SITEURL }}/tipuesearch_content.js"></script>
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/tipuesearch.css"/> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js" integrity="sha512-JxJpoAvmomz0MbIgw9mx+zZJLEvC6hIgQ6NcpFhVmbK1Uh5WynnRTTSGv3BTZMNBpPbocmdSJfldgV5lVnPtIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+	function openNav() {
+  	document.getElementById("navbar").style.display = "block";
+  	document.getElementById("menutoggle").style.display = "none";	
+  }
+
+	function closeNav() {
+  	document.getElementById("navbar").style.display = "none";
+  	document.getElementById("menutoggle").style.display = "block";
+	}
+	</script>
+
+	<script>
+		// Open the full screen search box
+	function openSearch() {
+	  document.getElementById("myOverlay").style.display = "block";
+	}
+
+	// Close the full screen search box
+	function closeSearch() {
+	  document.getElementById("myOverlay").style.display = "none";
+	}
+	</script>
+</head>
+<body>
+
+<!-- Header w/ site title & social icons -->
+	<span id="menutoggle" onclick="openNav()"><i class="fas fa-bars"></i></span>
+	<h1 class="sitetitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+	<a onclick="openSearch()" class="search"><i class="fas fa-search"></i></a>
+
+	<div class="social">
+		{% for name, link in SOCIAL %}
+			<a href="{{ link }}" target=_blank class="social-icons"><i class="{% if name in ['envelope'] %}fas{% else %}fab{% endif %} fa-{{ name }}"></i></a>
+		{% endfor %}
+	</div>
+
+<!-- Content -->
+	<div class="content">
+		{% block content %}{% endblock %}
+	</div>
+
+<!-- Menu w/ Links, Categories & Blogroll -->
+	<div id="navbar">
+		<div class="menubox">
+			<a class="closenav" onclick="closeNav()"><i class="fas fa-times fa-lg" style="margin-bottom: 1.5em"></i></a>
+				<p><a class="navlink" href="{{ SITEURL }}/ueber">Über</a></p>
+				<p><a class="navlink" href="{{ SITEURL }}/datenschutzerklarung">Datenschutzerklärung</a></p>
+				<p><a class="navlink" href="{{ SITEURL }}/impressum">Impressum</a></p>
+		</div>
+
+		<br>
+
+		<div class="box">
+		<p class="menutitle">Kategorien</p>
+			{% for category, articles in categories %}
+				<a href="{{ SITEURL }}/{{ category.url }}" class="blogroll">{{ category }}</a>
+			{% endfor %}
+		</div>
+
+		<div class="box">
+		<p class="menutitle">Blogroll</p>
+			{% for name, link in LINKS %}
+				<a href="{{ link }}" class="blogroll" target=_blank>{{ name }}</a>
+			{% endfor %}			
+		</div>
+
+	</div>
+
+<!-- Full Page Search Box -->
+	<div id="myOverlay" class="overlay">
+	  <span class="closebtn" onclick="closeSearch()" title="Close Search"><i class="fas fa-times fa-lg"></i></span>
+	  <div class="overlay-content">
+	    <form action="{{ SITEURL }}/search.html">
+	    	<input type="text" name="q" placeholder="Search..." id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
+	    </form>
+	  </div>
+	</div>
+
+	<script>
+	        $(document).ready(function() {
+	             $('#tipue_search_input').tipuesearch();
+	        });
+	</script>
+
+</body>
+</html>
