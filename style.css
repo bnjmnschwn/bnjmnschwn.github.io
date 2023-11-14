@@ -1,0 +1,71 @@
+html, body { height: 100%; }
+
+        body {
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          overflow: hidden;
+          font-family: "Red Hat Display";
+          color: #0f181d;
+        }
+
+        .container {
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 50px;
+        }
+
+        .socials {
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 0;
+        }
+
+        .background {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+        }
+
+        h1 {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+         list-style-type: none;
+         display: inline;
+         padding: 0;
+         margin: 0;
+         margin-right: 20px;
+        }
+
+        p {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .jobs {
+            margin-top:25px;
+        }
+
+        .small {
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        a {
+            color: #0f181d;
+        }
+
+        .nounderline {
+            text-decoration: none
+        }

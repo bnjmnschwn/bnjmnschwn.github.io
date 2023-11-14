@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schwn.io</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript">
+    window.onload= function() {
+        Particles.init({
+            selector: '.background',
+            color: ['#a6a9ac', '#8a8f91'],
+            maxParticles: 1337,
+            sizeVariations: 1,
+            connectParticles: false,
+            speed: 0.25
+        });
+    };
+    </script>
+    <div class="container">
+        <div class="info">
+            <h1>schwn.io</h1>
+            <div>
+                Benjamin Schwan
+                <p>M. Sc. Sports Science</p>
+            </div>
+        </div>
+        <div class="jobs">
+            <p class="small">Product Owner at <a href="https://www.mats.coach">MATS</a></p>
+            <p class="small">Founder & Dev of <a href="https://www.xcodata.com">XCODATA</a></p>
+        </div>
+        <div class="socials">
+            <ul>
+                <li><a href="mailto:bnjmn@schwn.io" target=_blank class="nounderline"><img src="images/envelope-regular.svg" width="20"></a></li>
+                <li><a href="https://www.linkedin.com/in/benjamin-schwan/" target="_blank" class="nounderline"><img src="images/linkedin-in.svg" width="20"></a></li>
+                <li><a href="https://www.instagram.com/bnjmnschwn/" target="_blank" class="nounderline"><img src="images/instagram.svg" width="20"></a></li>
+            </ul>
+        </div>
+    </div>
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+</body>
+</html>
